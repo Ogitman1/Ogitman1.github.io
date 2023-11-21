@@ -69,6 +69,7 @@ div#all div{ /* div de determinada matéria */
     padding: calc(1%);
 }
 @media screen and (max-width: 803px) { /*Estilização do layout para o mobile */
+  
     div#all {
         display: flex;
         flex-direction: column; /*container setado para estar em coluna */
