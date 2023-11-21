@@ -77,13 +77,14 @@
         </div>
         <img id="imgamostra" style="height: 400px; width: calc(20% - 10px); margin-top: 20px; border-radius: 10px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-gG0WxHdxyW3tTPJzE5LtVs2VC4yOesM2yQ&usqp=CAU"> </img>
     </div>
-
+ <h1 style="color: aliceblue; display: flex; justify-content: flex-start;
+  width: auto; height: 100px; margin: 5px calc(20%)">Perguntas Frequentes</h1>
     <div id="FAQ" style="display: flex; flex-direction: column; 
     justify-content: flex-start; height: auto ;width: 450px;
-    margin: auto calc(20% + 15px); margin-top: 40px; margin-bottom: 30px;">
+    margin: auto calc(20%);  margin-bottom: 30px;">
         <div class="pergunta" style=" display: flex; justify-content: space-between; flex-wrap: wrap; flex: auto auto calc(50%); ">
-            <h2 style="color: white;">O site é confiável?</h2>
-            <span id="icon" style="color: aliceblue;">
+            <h2 style="color: white; font-size: 20px;">O site é confiável?</h2>
+            <span class="icon" style="color: aliceblue; font-size: 19px;">
                 ^
             </span>
             
@@ -93,9 +94,9 @@
                 at dignissimos? Voluptatem dolor fuga odio porro sapiente debitis veniam at qui quam.
             </span>
         <hr > </hr>
-        <div class="pergunta" style=" display: flex; justify-content: space-between; flex-wrap: wrap; flex: auto auto calc(50%);">
-            <h2 style="color: white;">Como funciona o guia de estudos?</h2>
-            <span id="icon"  style="color: aliceblue;">
+        <div class="pergunta" style=" display: flex; justify-content: space-between; flex-wrap: wrap; flex: auto auto calc(50%); ">
+            <h2 style="color: white; font-size: 20px;">Os professores são bons?</h2>
+            <span class="icon"  style="color: aliceblue; font-size: 19px;">
                 ^
             </span>
             
@@ -106,8 +107,8 @@
             </span>
         <hr > </hr>
         <div class="pergunta" style=" display: flex; justify-content: space-between; flex-wrap: wrap; flex: auto auto calc(50%);">
-            <h2 style="color: white;">Os professores são bons?</h2>
-            <span id="icon" style="color: aliceblue;">
+            <h2 style="color: white; font-size: 20px;">Como funciona o guia de estudos? </h2>
+            <span class="icon" style="color: aliceblue; font-size: 19px;">
                 ^
             </span>
             
@@ -152,7 +153,7 @@
             answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
 
             // Altera o texto do ícone com base na visibilidade da resposta
-            const icon = document.getElementById('icon');
+            const icon = question.querySelector('.icon');
             if (answer.style.display === 'block') {
                 icon.innerText = "⤵";
             } else {

@@ -137,6 +137,12 @@ div#all div{ /* div de determinada matéria */
     h2#segundo{
         text-align: center;
     }
+    div#FAQ{
+        display: inline-block;
+        margin: auto 40px;
+        height: auto;
+        width: 300px;
+    }
 }
 div h2{
     margin: 10px 10px;
