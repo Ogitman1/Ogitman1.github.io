@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linkedin</title>
+    <title>Linkedin</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    crossorigin="anonymous">
     <link rel="stylesheet" href="linkedin.css">
+    
 </head>
 <body>
     <nav >
         <header >
-            <h2 ><a href="Linkedin.html" style="text-decoration: none; color: rgb(39, 36, 36);">Linkedin</a></h2>
+            <h2 style="font-size: 31px;"><a href="Linkedin.html" style="text-decoration: none; color: rgb(39, 36, 36);">Linkedin</a></h2>
             <ul >
-                <li><a style="font-weight: 400; font-size: 16px;">Página de atividades</a></li>
-                <li style="margin-left: 60px; font-weight: 400; font-size: 16px;"><a>Interesses Gerais</a></li>
-                <li style="margin-left: 60px; font-weight: 400; font-size: 16px;"><a>Áreas tecnológicas</a></li>
+                <li  onclick="Changepage('interesses')"><a style=" font-weight: 400; font-size: 16px; margin-left: 30px;">Interesses Gerais</a></li>
+                <li  onclick="Changepage('tecnologia')"><a style=" font-weight: 400; font-size: 16px; margin-left: 30px;">Áreas tecnológicas</a></li>
+                <li onclick="Changepage('linkedin')"><a style=" font-weight: 400; font-size: 16px; margin-left: 30px;">Página de atividades</a></li>
             </ul>
         </header>
     </nav>
     <div >
         <img src="./assets&images/eu.jpg" style="border: black solid 2px;" > 
-        <h2>Matheus Felipe M. B. Santos</h2>
+        <h2 style="font-size: 31px;">Matheus Felipe M. B. Santos</h2>
         <span style="margin-top: 20px;">Web developer fullstack</span>
     </div>
-    <div style="display: flex;  flex-wrap: wrap; height: auto; 
-    width: auto; margin-top: 30px; justify-content: center; overflow: hidden;">
-        <div style="height: 300px; width: auto; flex: 0 0 calc(80% + 10px); 
-        background-color: azure; border-radius: 9px; margin: 10px 10px;  box-shadow: 2px 4px 9px rgb(37, 36, 36);">
+    <div id="content" style="display: flex;  flex-wrap: wrap; height: auto; 
+    width: auto; margin-top: 30px; justify-content: center; overflow: hidden; ">
+        <div style="height: auto; width: auto; flex: 0 0 calc(80% + 10px); 
+        background-color: rgb(246, 255, 255); border-radius: 9px; margin: 10px 10px;  box-shadow: 2px 4px 9px rgb(37, 36, 36);">
             <h2 style="margin-top: 20px; margin-bottom: 10px;">Um pouco sobre mim</h2>
-            <span style=" display: inline-block;height: auto; width: 500px;  text-align: center; margin-top: 10px;">
+            <span style=" display: inline-block;height: auto; width: auto;  text-align: center; margin-top: 10px; margin-bottom: 20px;">
                 Olá, meu nome é Matheus e sou um desenvolvedor web especializado em construir websites do 0. <br>
                 Tenho formação técnica de 3 anos no Senac Nações Unidas. Lá pude aprender de forma detalhada como
                 construir websites completos, desde operação de servidores com banco dados até conhecimentos de design complexos para
-                aprimorar de forma eficiente a experiência do usuário. <br> Caso queira ter o seu próprio website me contate pelo número(22)98809-5035
+                aprimorar de forma eficiente a experiência do usuário. <br></br> Caso queira ter o seu próprio website me contate pelo número(22)98809-5035
 
             </span>
             
@@ -40,7 +43,7 @@
         <div style="display: inline-block;height: auto; width: auto; background-color: azure;  margin: 10px 10px; 
         border-radius: 9px; flex: 0 0 calc(80% + 10px); flex-wrap: wrap; box-shadow: 2px 4px 9px rgb(37, 36, 36);">
             <h2 style="margin-top: 20px; margin-bottom: 10px; align-items: center; flex: 0 0 calc(100% );">Competências e Habilidades</h2>
-            <p style=" display: inline-block;height: auto; width: 500px;  text-align: center; margin-top: 10px;
+            <p style=" display: inline-block;height: auto; width: auto;  text-align: center; margin-top: 4px;
              flex: 0 0 calc(100% );">
                 
 
@@ -48,43 +51,43 @@
             <ul style="display: inline-flex; flex-direction:row; justify-content: center;
             align-items: center; list-style: circle; flex: 0 0 calc(100% ); width: 100%; margin-top: 18px;
             flex-wrap: wrap;">
-                <li style="flex: 0 0 calc(33.3% + 10px); margin-bottom: 15px;">Liderança</li>
-                <li style="flex: 0 0 calc(33.3% + 10px); margin-bottom: 15px;">Resolução de problemas</li>
-                <li style="flex: 0 0 calc(33.3% + 10px);">Planejamento e Comunicação</li>
-                <li style="flex: 0 0 calc(33.3% + 10px);">Designer criativo</li>
+                <li style="flex: 0 0 calc(33.3% + 10px); margin-bottom: 15px; margin-right: 25px;">Liderança</li>
+                <li style="flex: 0 0 calc(33.3% + 10px); margin-bottom: 15px; margin-right: 25px;">Resolução de problemas</li>
+                <li style="flex: 0 0 calc(33.3% + 10px); margin-right: 25px;">Planejamento e Comunicação</li>
+                <li style="flex: 0 0 calc(33.3% + 10px); margin-right: 25px;">Designer criativo</li>
             </ul>
             <hr style="display: inline-flex;justify-content: center ;margin-top: 40px; width: 70%;">
-            <h2 style="font-size: 20px; margin-top: 25px;">Línguas</h2>
+            <h2 style="font-size: 24px; margin-top: 5px;">Línguas</h2>
             <ul style="display: inline-flex; flex-direction:row; justify-content: center;
             align-items: center; list-style: circle; flex: 0 0 calc(100% ); width: 100%; margin-top: 18px;">
-                <li style="margin-bottom: 40px; margin-top: 5px;">Inglês Intermediário</li>
-                <li style="margin-bottom: 40px; margin-top: 5px;">Português fluente</li>
-                <li style="margin-bottom: 40px; margin-top: 5px;">Espanhol básico</li>
+                <li style="margin-bottom: 40px; margin-top: 5px; margin-right: 40px;">Inglês Intermediário</li>
+                <li style="margin-bottom: 40px; margin-top: 5px; margin-right: 40px;">Português fluente</li>
+                <li style="margin-bottom: 40px; margin-top: 5px; margin-right: 40px;">Espanhol básico</li>
             </ul>
             
         </div>
-        <div style="display: inline-block;height: 300px; width: auto; background-color: azure;  margin: 10px 10px; 
+        <div style="display: inline-block;height: auto; width: auto; background-color: azure;  margin: 10px 10px; 
         border-radius: 9px; flex: 0 0 calc(80% + 10px); 
         flex-wrap: wrap; box-shadow: 2px 4px 9px rgb(37, 36, 36);margin-bottom: 60px;">
             <h2 style="margin-top: 20px; margin-bottom: 10px; align-items: center; flex: 0 0 calc(100% );">Certificados</h2>
-            <p style=" display: inline-block;height: auto; width: 500px;  text-align: center; margin-top: 10px;
+            <p style=" display: inline-block;height: auto; width: auto;  text-align: center; margin-top: 10px;
              flex: 0 0 calc(100% ); ">
                 Abaixo você pode checar alguns dos meus certificados que conquistei ao longo dos anos, caso precise de algum projeto em específico
                 de alguma dessas linguagens
 
             </p>
             <ul style="display: inline-flex; flex-direction:row; justify-content: center;
-            align-items: center; list-style: circle; flex: 0 0 calc(100% ); width: 100%; margin-top: 18px;">
-                <li>Java</li>
-                <li>Javascript</li>
-                <li>Python</li>
-                <li>C#</li>
+            align-items: center; list-style: circle; flex: 0 0 calc(100% ); width: 100%; ">
+                <li style="margin-right: 40px;">Java</li>
+                <li style="margin-right: 40px;">Javascript</li>
+                <li style="margin-right: 40px;">Python</li>
+                <li style="margin-right: 40px;">C#</li>
             </ul>
             <a href="https://www.linkedin.com/in/matheus-felipe-santos-8a82b4239/details/certifications/" target="_blank">
-                <button style="padding: 10px 80px 10px 80px; margin-top: 30px; font-size: 14px;
-             color: rgb(231, 223, 223); background-color: rgb(78, 75, 255);
+                <button style="padding: 10px 80px 10px 80px; margin-top: 10px; font-size: 14px;
+             color: rgb(231, 223, 223); background-color: rgb(78, 75, 255);margin-bottom: 25px ;
              border-radius: 12px; font-weight: 800; font-family:  'Arial'; text-shadow: 1px 1px 3px black;">
-             Ver mais</button>
+             Ver Certificados</button>
             </a>
         </div>
         
@@ -93,14 +96,56 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    text-align: center; background-color: rgb(245, 245, 240); box-shadow: 5px 3px 8px black; height: 12vh;">
+    text-align: center; background-color: rgb(238, 238, 238); box-shadow: 5px 3px 8px black; height: auto;">
         <span >Matheus&CO</span>
         <hr style="width: 100%;">
         <ul style="font-family:'Open Sans'">
-            <li><a href="https://www.instagram.com/santos_matheus18/" 
+            <li style="margin-right: 30px;"><a href="https://www.instagram.com/santos_matheus18/" 
                 target="_blank" style="text-decoration: none; color: rgb(29, 25, 25);">Instagram</a></li>
             <li><a style="text-decoration: none; color: rgb(29, 25, 25);">Whatsapp</a></li>
         </ul>
     </footer>
 </body>
+    <script>
+        function Changepage(tipo){ 
+            let content = document.getElementById("content");
+            content.innerHTML = ' '
+            switch(tipo){
+                case 'interesses':
+                    content.innerHTML = `
+                    <div  style="height: auto; width: auto; flex: 0 0 calc(80% + 10px); 
+            background-color: azure; border-radius: 9px; margin: 10px 10px 40px 10px;  box-shadow: 2px 4px 9px rgb(37, 36, 36);">
+                <h2 style="margin-top: 20px; margin-bottom: 10px;">Biografia</h2>
+                <span id='hobby' 
+                style=" display: inline-block;height: auto; width: auto;  text-align: center; margin-top: 10px; margin-bottom: 20px">
+                Atualmente tenho 18 anos e já faz 4 anos que estou em São Paulo. <br> Até agora, consegui bastante experiência em desenvolvimento web e meus
+                professores dizem que sou ótimo no que faço. Gosto sempre de aprender habilidades que penso que são úteis pra me tornar um profissional de qualidade,
+                mesmo que elas não sejam consideradas partes da "minha área".<br> </br> Pra mim, ser profissional é mais do que conhecer teorias. É conhecer teorias e saber aplicá-las.
+                </span>   
+        </div>
+            <div style="height: auto; width: auto; flex: 0 0 calc(80% + 10px); 
+            background-color: rgb(246, 255, 255); border-radius: 9px; margin: 10px 10px 40px 10px;  box-shadow: 2px 4px 9px rgb(37, 36, 36);">
+                <h2 style="margin-top: 20px; margin-bottom: 10px;">Meus Interesses e Hobbies</h2>
+                <span style=" display: inline-block;height: auto; width: auto;  text-align: center; margin-top: 5px; margin-bottom: 15px">
+                Ok, agora que vocês conhecem o "Matheus Profissional" tá na hora de conhecerem o "Matheus Tempo Livre". <br><img style="width: calc(75% + 15px); border-radius: 12px; height:300px; margin-right: 5px;" src="data:image/jpeg;base64,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"> </img>  </br>
+                Normalmente quando eu não estudo ou trabalho adoro ler e passar um tempo com a minha família vendo séries ou filmes. 
+                Também adoro jogar videos games, principalmente RPG por que afinal o que é melhor do que jogar uma campanha roleplay todo sábado? <br></br>
+                Se possível prefiro ficar em casa do que sair para lugares cheios e/ou com muito barulho, quando se trata de rolê prefiro mil vezes
+                sair com os amigos pro shoppong, ir pro cinema, liberdade ou um evento mais tranquilo que envolve a galera.
+                </span>  
+                
+        </div>
+                    `; break;
+                    case 'tecnologia':
+                        content.innerHTML = `
+                        
+                        
+                        `
+                    ; break;
+            }
+        }
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+     crossorigin="anonymous"></script>
 </html>
