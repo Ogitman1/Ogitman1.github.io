@@ -55,7 +55,7 @@ body > div {
 }
 
 /* Estilos para a imagem dentro do corpo do documento */
-img {
+img.radius {
     display: inline-block;
     height: 300px;
     width: 300px;
