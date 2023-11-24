@@ -106,3 +106,8 @@ a:hover{
 button:hover{
     cursor: pointer;
 }
+.technology-section img{
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+}
