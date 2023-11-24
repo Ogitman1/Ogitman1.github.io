@@ -6,6 +6,7 @@
     <title>Linkedin</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
     crossorigin="anonymous">
+    
     <link rel="stylesheet" href="linkedin.css">
     
 </head>
@@ -21,7 +22,7 @@
         </header>
     </nav>
     <div id="perfil">
-        <img src="./assets&images/eu.jpg" class = "radius" ;style="border: black solid 2px;" > 
+        <img src="./assets&images/eu.jpg" class = "radius" ;style="border: black solid 2px; " > 
         <h2 style="font-size: 31px;">Matheus Felipe M. B. Santos</h2>
         <span style="margin-top: 20px;">Web developer fullstack</span>
     </div>
@@ -29,7 +30,7 @@
     width: auto; justify-content: center; overflow-x: hidden; ">
         <div style="height: auto; width: auto; flex: 0 0 calc(80% + 10px); 
         background-color: rgb(246, 255, 255); border-radius: 9px; margin: 10px 10px;  
-        box-shadow: 2px 4px 9px rgb(37, 36, 36); margin-top: 30px;">
+        box-shadow: 2px 4px 9px rgb(37, 36, 36); margin-top: 30px; ">
             <h2 style="margin-top: 20px; margin-bottom: 10px;">Um pouco sobre mim</h2>
             <span style=" display: inline-block;height: auto; width: auto;  text-align: center; margin-top: 10px; margin-bottom: 20px;">
                 Olá, meu nome é Matheus e sou um desenvolvedor web especializado em construir websites do 0. <br>
@@ -85,7 +86,7 @@
                 <li style="margin-right: 40px;">Python</li>
                 <li style="margin-right: 40px;">C#</li>
             </ul>
-            <a href="https://www.linkedin.com/in/matheus-felipe-santos-8a82b4239/details/certifications/" target="_blank">
+            <a href="https://www.linkedin.com/in/matheus-felipe-santos-8a82b4239/" target="_blank">
                 <button style="padding: 10px 80px 10px 80px; margin-top: 10px; font-size: 14px;
              color: rgb(231, 223, 223); background-color: rgb(78, 75, 255);margin-bottom: 25px ;
              border-radius: 12px; font-weight: 800; font-family:  'Arial'; text-shadow: 1px 1px 3px black;">
@@ -115,6 +116,7 @@
             content.innerHTML = ' '
             switch(tipo){
                 case 'interesses':
+                    alert("A página mudou para:  "+ tipo);
                     content.innerHTML = `
                     <div  style="height: auto; width: auto; flex: 0 0 calc(80% + 10px); 
             background-color: azure; border-radius: 9px; margin: 10px 10px 40px 10px;  box-shadow: 2px 4px 9px rgb(37, 36, 36);">
@@ -169,96 +171,179 @@
                    
                    ` ;break;
                     case 'materias':
+                    alert("A página mudou para: "+ tipo);
                         perfil.innerHTML = '';
                         content.innerHTML = `
-        <div id="carouselExample" class="carousel slide" style = "height: auto; width: 100%">
+        <div id="maincarousel" class="carousel slide" style = "height: auto; width: 100%">
             <div class="carousel-inner">
                 <div class="carousel-item active ">
                     <img src="./assets&images/trabalhos/Fisica.png" 
-                    style = "height: 600px; object-position: top center;"
+                    style = "height: 600px; object-position: top center; position: relative;"
                     class="  d-inline-block w-100  object-fit-cover";
                      alt="Trabalho Filme Interestelar">
+                     <div class="carousel-caption d-block "
+                     style="position: absolute; bottom: 10%; left: 10%;">
+                       <a style = "text-decoration: none; color: #efefef"; target="_blank";
+                       href="https://www.canva.com/design/DAFwP1wQyH0/72OQw8R4DZHivtS5S9ynNg/edit?utm_content=DAFwP1wQyH0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"> 
+                        <h5 style="font-size: 35px; text-shadow: 2px 1px 4px black;
+                        font-weight: 800; letter-spacing: 2px">Trabalho de Física</h5>
+                       </a>
+                       
+                    </div>
+                     </img>
             </div>
 
             <div class="carousel-item">
                 <img src="./assets&images/trabalhos/TI.png" 
                 style = "height: 600px; object-fit: cover; object-position: top center;"
                 class="d-inline-block w-100" alt="Trabalho Quimica Nylon">
+                <div class="carousel-caption d-block "
+                     style="position: absolute; bottom: 10%; left: 10%;">
+                     <a href = "https://www.canva.com/design/DAFrF5kwvpQ/7B26ATOWeabDXrO3ZclNOw/edit?utm_content=DAFrF5kwvpQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
+                     style = "text-decoration: none; color: #efefef" target = "_blank">
+                        <h5 style="font-size: 35px;  text-shadow: 2px 1px 8px black;
+                        font-weight: 800; letter-spacing: 2px">Trabalho de TI</h5>
+                     </a>
+                    </div>
+                </img>
             </div>
 
             <div class="carousel-item">
                 <img src="./assets&images/trabalhos/Historia.png" 
                 style = "height: 600px; object-fit: cover; object-position: top center;"
                 class="d-inline-block w-100" alt="Trabalho Campanha de Galipoli">
+                <div class="carousel-caption d-block "
+                     style="position: absolute; bottom: 10%; left: 10%;">
+                     <a href = "https://www.canva.com/design/DAFsxypLMoc/FpsDUmOHv76Zsj0p-Xjb5w/edit?utm_content=DAFsxypLMoc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
+                     style = "text-decoration: none; color: #efefef" target = "_blank">
+                        <h5 style="font-size: 35px;  text-shadow: 2px 1px 8px black;
+                        font-weight: 800; letter-spacing: 2px">Trabalho de Historia</h5>
+                     </a>
+                    </div>
+                </img>
             </div>
 
             <div class="carousel-item">
                 <img src="./assets&images/trabalhos/Linguagens1.png" 
                 style = "height: 600px; object-fit: cover; object-position: center center;"
                 class="d-inline-block w-100" alt="Trabalho Miniconto Linguagens">
+                <div class="carousel-caption d-block "
+                     style="position: absolute; bottom: 10%; left: 10%;">
+                     <a href = "https://www.canva.com/design/DAFw-VtPh3k/jQZ4CiUyOpSvmHSWKlQHCA/edit?utm_content=DAFw-VtPh3k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
+                     style = "text-decoration: none; color: #efefef" target = "_blank">
+                        <h5 style="font-size: 35px;  text-shadow: 2px 1px 8px black;
+                        font-weight: 800; letter-spacing: 2px">Trabalho de Linguagens</h5>
+                     </a>
+                    </div>
+                </img>
             </div>
             
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#maincarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#maincarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
 </div>
-<div>
-    <div id="carouselExample" class="carousel slide" style = "height: auto; width: 100%">
-            <div class="carousel-inner">
-                <div class="carousel-item active ">
-                    <img src="./assets&images/Eudeazul.png" 
-                    style = "height: 100px; width: 100px;"
-                    class="  d-inline-block w-100  object-fit-cover";
-                     alt="Trabalho Filme Interestelar">
-            </div>
-
-            <div class="carousel-item">
-                <img src="./assets&images/trabalhos/TI.png" 
-                style = "height: 600px; object-fit: cover; object-position: top center;"
-                class="d-inline-block w-100" alt="Trabalho Quimica Nylon">
-            </div>
-
-            <div class="carousel-item">
-                <img src="./assets&images/trabalhos/Historia.png" 
-                style = "height: 600px; object-fit: cover; object-position: top center;"
-                class="d-inline-block w-100" alt="Trabalho Campanha de Galipoli">
-            </div>
-
-            <div class="carousel-item">
-                <img src="./assets&images/trabalhos/Linguagens1.png" 
-                style = "height: 600px; object-fit: cover; object-position: center center;"
-                class="d-inline-block w-100" alt="Trabalho Miniconto Linguagens">
-            </div>
-            
+<div id="smallcarousel" class="carousel slide" style="height: auto; width: 100%" data-ride="carousel">
+    <h2 style="font-size: 34px">Integrantes</h2>
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="margin-top: 15px">
+            <img src="./assets&images/Eudeazul.jpg" class="d-inline-block object-fit-cover rounded-circle" style="height: 200px; width: 200px;" alt="Matheus Felipe">
+            <h5 style="font-size: 23px; font-weight: 500; margin-bottom: 10px; margin-top: 10px;">Matheus Felipe</h5>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-</div>               
+
+        <div class="carousel-item" style="margin-top: 15px">
+            <img src="./assets&images/Diogo.jpg" class="d-inline-block object-fit-cover rounded-circle" style="height: 200px; width: 200px; object-position: center center;" alt="Diogo Sena">
+            <h5 style="font-size: 23px; font-weight: 500; margin-bottom: 10px; margin-top: 10px;">Diogo Sena</h5>
+        </div>
+
+        <div class="carousel-item" style="margin-top: 15px">
+            <img src="./assets&images/Kazu.jpg" class="d-inline-block object-fit-cover rounded-circle" style="height: 200px; width: 200px; object-position: center center;" alt="Davi Kazussuke">
+            <h5 style="font-size: 23px; font-weight: 500; margin-bottom: 10px; margin-top: 10px;">Davi Kazussuke</h5>
+        </div>
+
+        <div class="carousel-item" style="margin-top: 15px">
+            <img src="./assets&images/Gabi.jpg" class="d-inline-block object-fit-cover rounded-circle" style="height: 200px; width: 200px; object-position: center center;" alt="Gabriela Lopes">
+            <h5 style="font-size: 23px; font-family: 'system-ui',-apple-system,'Segoe UI',Roboto,'Helvetica Neue',
+            'Noto Sans','Liberation Sans',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji',
+            'Segoe UI Symbol','Noto Color Emoji'; font-weight: 500; margin-bottom: 10px; 
+            margin-top: 10px;">Gabriela Lopes</h5>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#smallcarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#smallcarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+     `
+                    ; break;
+                    case 'tecnologia':
+                        perfil.innerHTML = " "
+                 content.innerHTML =  `
+                        
+    
+
+<section class="technology-section">
+    <h1 style="margin: 38px 5px">Tecnologias Inovadoras</h1>
+    <h2>Realidade Aumentada (AR)</h2>
+    <p  >
+        A Realidade Aumentada combina o mundo real com elementos virtuais, proporcionando uma experiência interativa e imersiva. É amplamente utilizada em aplicativos de jogos, treinamento e simulações.
+    </p>
+    <img src="ar_image.jpg" alt="Realidade Aumentada">
+</section>
+
+<section class="technology-section">
+    <h2>Realidade Virtual (VR)</h2>
+    <p >
+        A Realidade Virtual cria um ambiente totalmente simulado, proporcionando uma experiência imersiva ao usuário. É aplicada em jogos, treinamento, medicina e entretenimento.
+    </p>
+    <img src="vr_image.jpg" alt="Realidade Virtual">
+</section>
+
+<section class="technology-section">
+    <h2>Internet das Coisas (IoT)</h2>
+    <p>
+        A Internet das Coisas refere-se à conexão de dispositivos físicos à internet, permitindo a troca de dados. Ela está presente em casas inteligentes, cidades inteligentes e na indústria.
+    </p>
+    <img src="iot_image.jpg" alt="Internet das Coisas">
+</section>
+
+<section class="technology-section">
+    <h2>Inteligência Artificial (AI)</h2>
+    <p>
+        A Inteligência Artificial envolve a criação de sistemas que podem realizar tarefas que normalmente exigiriam inteligência humana. Aplicações incluem reconhecimento de voz, chatbots e carros autônomos.
+    </p>
+    <img src="ai_image.jpg" alt="Inteligência Artificial">
+</section>
+
+<section class="technology-section">
+    <h2>Ciência de Dados</h2>
+    <p>
+        A Ciência de Dados envolve a análise e interpretação de grandes conjuntos de dados para obter insights valiosos. É essencial para tomada de decisões informadas em diversos setores.
+    </p>
+    <img src="data_science_image.jpg" alt="Ciência de Dados">
+</section>
+
+</body>
+</html>
+                        
+                        
                         `
+
                     ; break;
             }
+            
         }/*
-        <div id="1" style = "margin-top: 10px;">
-                <img src="./assets&images/Eudeazul.jpg" 
-                alt="Matheus Felipe"
-                style="border-radius: 100%; border: black solid 2px;
-                height: 100px;
-                width: 100px";
-                margin-bottom: 10px>
-                <p style = "margin-top: 7px">Matheus Felipe <p>
-            </div>
+        
             <button> </button>
             <button> </button>
             <div id="2">
@@ -281,4 +366,6 @@
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
      crossorigin="anonymous"></script>
+
+<!-- Bootstrap JS Bundle (Bootstrap + Popper) -->
 </html>
