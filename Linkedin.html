@@ -109,6 +109,7 @@
     </footer>
 </body>
     <script>
+        
         function Changepage(tipo){ 
             let content = document.getElementById("content");
             let perfil = document.getElementById("perfil");
@@ -170,8 +171,15 @@
                    
                    ` ;break;
                     case 'materias':
+                    document.addEventListener('DOMContentLoaded', function () {
+                    var myCarousel = new bootstrap.Carousel(document.getElementById('smallcarousel'), {
+                    interval: 100,  // Defina o intervalo desejado em milissegundos
+            wrap: true       // Defina como true se desejar que o carrossel volte ao início após a última imagem
+    });
+  });
                     alert("A página mudou para: " + JSON.stringify(tipo));
                     alert("Clique no título para ver os trabalhos");
+                    alert("Clique nas setas para que o slide possa correr automaticamente");
                         perfil.innerHTML = '';
                         content.innerHTML = `
         <div id="maincarousel" class="carousel slide" style = "height: auto; width: 100%">
@@ -248,7 +256,7 @@
             <span class="visually-hidden">Next</span>
         </button>
 </div>
-<div id="smallcarousel" class="carousel slide" style="height: auto; width: 100%" data-ride="carousel">
+<div id="smallcarousel" class="carousel slide" style="height: auto; width: 100%" data-bs-ride="carousel">
     <h2 style="font-size: 34px">Integrantes</h2>
     <div class="carousel-inner">
         <div class="carousel-item active" style="margin-top: 15px">
@@ -274,15 +282,16 @@
             margin-top: 10px;">Gabriela Lopes</h5>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#smallcarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#smallcarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+    <button class="carousel-control-prev text-primary-emphasis btn btn-primary" type="button" data-bs-target="#smallcarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-visible">Previous</span>
+</button>
+<button class="carousel-control-next text-primary-emphasis btn btn-primary" type="button" data-bs-target="#smallcarousel" data-bs-slide="next" >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-visible">Next</span>
+</button>
 </div>
+
 
      `
                     ; break;
