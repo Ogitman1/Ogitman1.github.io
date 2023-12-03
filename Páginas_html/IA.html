@@ -1,117 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inteligência Artificial</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-        }
-        nav{
-            margin: 0;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #3498db;
-            color: white;
-            margin: 0;
-            width: 100%;
-        }
-
-
-        h2 {
-            color: #3498db;
-        }
-
-        p {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-        section{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            flex-direction: column;
-            margin-top: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        footer{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            font-weight: 500;
-            font-family: "Open Sans", "Helvetica Neue";
-        }
-        iframe {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        @media screen and (max-width: 500px) {
-            iframe{
-                height: 400px;
-                width: 400px
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/Datascience.css"></link>
+    <title>Ciencia de dados</title>
 </head>
-
 <body>
-<nav>
-    <header>
-        <h1>Inteligência Artificial</h1>
-        <p>Explorando o fascinante mundo da IA.</p>
-    </header>
-</nav>
-    <section>
-        <h2>O que é Inteligência Artificial?</h2>
-        <p>A inteligência artificial (IA) refere-se à simulação de processos de inteligência humana por meio da programação de algoritmos em sistemas computacionais. Esses sistemas são projetados para realizar tarefas que normalmente exigiriam inteligência humana, como aprendizado, raciocínio, resolução de problemas, reconhecimento de padrões e compreensão de linguagem natural.</p>
-    </section>
+    <nav style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <h1>IA</h1>
+        <header >
+            <ul id="ul-main" style="display: flex; justify-content: space-around;">
+                <li><a target="_blank" href="./IOT.html">IOT</a></li>
+                <li><a href="./Reala.html">Realidade Aumentada</a></li>
+                <li><a href="./Realv.html">Realidade Virtual</a></li>
+                <li><a href="./Datascience.html">Ciência de dados</a></li>
+            </ul>
+        </header>
+    </nav>
+    <div style="display: flex; height: 80vh; width: 100vw; flex-wrap: wrap; justify-content: center;">
+        <section id="sobre" style="flex: 0 0 calc(80% + 15px); 
+        justify-content: center; align-items: center; text-align: center;">
+            <h2>Sobre IA</h2>
+            <p style="margin-top: 10px; margin-bottom: 10px; padding: 10px 90px;">
+                A Inteligência Artificial (IA) é uma das áreas mais fascinantes e promissoras da tecnologia atual. Ela permite que máquinas e dispositivos eletrônicos realizem tarefas que antes eram exclusivas dos seres humanos. E não apenas tarefas mecânicas, mas também tarefas que exigiam a atuação de profissionais especializados.
+            </p>
+        
+        </section>
+        <div style="display: inline-block;  width: 80%; margin-top: 15px; margin-bottom: 15px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdiZBbNeZ3A5FBLig3B1Gt8XNLNy1oW1S5Jg&usqp=CAU" 
+            class="img-fluid" alt="Ciencia de dados"
+            style="object-fit: cover; object-position: center center; 
+            width: 100%; height: 400px;
+            border-radius: 17px;">
+        </div>
+        <section>
+            <h2>Qual o objetivo da Inteligência Artificial?</h2>
+            <p>A área de Inteligência Artificial e Machine Learning foi criada visando desenvolver sistemas que possam executar tarefas complexas de forma eficiente e autônoma. Sendo a área de Machine Learning uma subárea da Inteligência Artificial, que se concentra no desenvolvimento de algoritmos e técnicas que permitem às máquinas aprender a partir de dados e melhorar seu desempenho ao longo do tempo.
 
-    <section>
-        <h2>Aplicações da Inteligência Artificial</h2>
-        <p>A IA tem uma ampla variedade de aplicações em diferentes setores, incluindo:</p>
-        <ul>
-            <li>Reconhecimento de voz e imagem</li>
-            <li>Assistentes virtuais</li>
-            <li>Carros autônomos</li>
-            <li>Medicina e diagnóstico médico</li>
-            <li>Finanças e serviços bancários</li>
-        </ul>
-    </section>
+                Em resumo, após serem treinados, esses algoritmos podem facilitar ou mesmo realizar algumas de nossas tarefas, o que significa que a IA pode melhorar a eficiência e a qualidade das nossas vidas. Isso pode ser feito através da automação de tarefas, análise de dados e resolução de problemas complexos, trazendo avanços significativos em diversos setores e contribuindo para o desenvolvimento da sociedade na totalidade.</p>
+        </section>
+        <section>
+            <h2>O que a Inteligência Artificial é capaz de fazer?</h2>
+            <p>Apesar de ainda não termos conquistado a Inteligência Artificial Geral, a IA tem avançado rapidamente.
 
-    <section>
-        <h2>Futuro da Inteligência Artificial</h2>
-        <p>O campo da IA está em constante evolução, com pesquisadores e desenvolvedores 
-        trabalhando em novas e emocionantes aplicações. O futuro da IA promete avanços 
-        significativos em áreas como aprendizado de máquina, redes neurais e compreensão aprofundada da inteligência humana.
-    </p>
-    <iframe width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/Lhu8bdmkMCM?si=_JVO0v_zhvmxjO0v" 
-    title="YouTube video player" frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen></iframe>
-    </section>
-
-    <footer>
-        <p>Desenvolvido por Matheus Felipe, 2023.</p>
-    </footer>
-
+                Algumas das principais aplicações de IA incluem:</p>
+            
+            <p>Por meio da computação de baixo custo, nuvem, big data, análise avançada e tecnologias móveis, 
+                coisas físicas podem compartilhar e coletar dados com o mínimo de intervenção humana. Nesse mundo hiperconectado, 
+                os sistemas digitais podem gravar, monitorar e ajustar cada interação entre itens conectados. 
+                O mundo físico encontra o mundo digital, e eles trabalham em conjunto.</p>
+                <li><b>Tomada de Decisões Informada:</b> A ciência de dados permite que as organizações tomem decisões mais informadas, baseadas em análises e evidências extraídas de dados. Isso contribui para estratégias mais eficazes e resultados mais precisos.</li>
+            <li><b>Acesso a tecnologia de sensores de baixo custo e baixa potência.</b>  Sensores acessíveis e confiáveis estão possibilitando a tecnologia IoT para mais fabricantes.</li>
+            <li><b>Conectividade.</b> Uma série de protocolos de rede para a Internet facilitou a conexão de sensores à nuvem e a outras coisas para transferência eficiente de dados.</li>
+            <li><b>Machine learning e análise avançada. </b> Com os avanços em machine learning e análise avançada, além do acesso a quantidades grandes e variadas de dados armazenados na nuvem, as empresas podem obter insights de maneira mais rápida e fácil. O surgimento dessas tecnologias aliadas continua a ultrapassar os limites da IoT e os dados produzidos pela IoT também alimentam essas tecnologias.
+            </li>
+            <li><b>Inteligência artificial (IA) conversacional.</b> Os avanços nas redes neurais trouxeram o NLP (natural-language processing, processamento de linguagem natural) aos dispositivos de IoT (como assistentes pessoais digitais Alexa, Cortana e Siri) e os tornaram atraentes, acessíveis e viáveis para uso doméstico.</li>
+          
+            
+        </section>
+        <section id="sobre" style="flex: 0 0 calc(80% + 15px); 
+        justify-content: center; align-items: center; text-align: justify;">
+            <h2 style="margin: 10px auto;">Quais setores podem se beneficiar da IoT?</h2>
+            <p style="margin-top: 10px; margin-bottom: 10px;"><p>As organizações mais adequadas para a IoT são aquelas que se beneficiariam do uso de dispositivos sensores em seus processos de negócios.</p></p>
+            <li><b>Reconhecimento de voz e processamento de linguagem natural (PLN)</b></li>
+            <li><b>Visão computacional</b>
+            </li>
+            <li><b>Aprendizado de máquina e análise de dados
+            </b> </li>
+            <li><b>Tomada de decisão e planejamento</b> </li>
+            <li><b>Robótica</b> 
+            </li>
+            <li><b>Diagnóstico médico e tratamento personalizado;</b> 
+            </li>
+            <li><b>Arte e criatividade</b> 
+            </li>
+            <li>
+                <b>Automação de processos;</b>
+            </li>
+            <li><b>Pesquisa científica e inovação.</b></li>
+            
+        </section>
+        <section id="sobre" style="flex: 0 0 calc(80% + 15px); 
+        justify-content: center; align-items: center; text-align: justify;">
+            <h2 style="margin: 10px auto;">Como funciona a Inteligência Artificial?</h2>
+            <p style="margin-top: 10px; margin-bottom: 10px; text-align: center;">
+                Existem diversas técnicas e algoritmos para se ensinar uma máquina a realizar uma tarefa. Na maior parte dos casos, quando ouvimos falar de IA, estamos falando de algoritmos de Machine Learning.
+            </p>
+            <p style="text-align: center;">Em algoritmos de Machine Learning supervisionados, por exemplo, a ideia principal é que, após um processo que chamamos de treinamento, seja construído um modelo capaz de fazer uma conexão entre um tipo de entrada desejada com uma saída desejada.</p>
+            <p style="text-align: center;">Além disso, existem outras abordagens que fogem às aplicações supervisionadas. Um exemplo são os algoritmos não supervisionados que recebem dados sem informações de uma saída desejada e são capazes de identificar padrões. Um outro exemplo é o aprendizado por reforço onde os algoritmos aprendem a tomar decisões através da interação com um ambiente, recebendo feedback na forma de recompensas ou punições.</p>
+            
+            
+        </section>
+        <footer style="display: flex;justify-content: center ;flex-direction: column ; align-items: center;
+        background-color: rgb(39, 37, 37); color: white; width: 100%; margin-top: 25px;">
+            <h1 class="footer">Matheus&CO</h1>
+        </footer>
+    </div>
 </body>
-
 </html>
