@@ -13,8 +13,9 @@
 <body>
     <nav >
         <header >
-            <h2 style="font-size: 31px;"><a href="Linkedin.html" style="text-decoration: none; color: rgb(39, 36, 36);">Linkedin</a></h2>
+            <h2 style="font-size: 31px;"><a target="_blank" href="https://www.linkedin.com/in/matheus-felipe-santos-8a82b4239/" style="text-decoration: none; color: rgb(39, 36, 36);" >Linkedin</a></h2>
             <ul >
+                <li><a href="Linkedin.html" style=" color: black;text-decoration: none;font-weight: 400; font-size: 16px; margin-left: 30px;">Home</a></li></li>
                 <li  onclick="Changepage('interesses')"><a style=" font-weight: 400; font-size: 16px; margin-left: 30px;">Interesses Gerais</a></li>
                 <li  onclick="Changepage('tecnologia')"><a style=" font-weight: 400; font-size: 16px; margin-left: 30px;">Áreas tecnológicas</a></li>
                 <li onclick="Changepage('materias')"><a style=" font-weight: 400; font-size: 16px; margin-left: 30px;">Página de atividades</a></li>
@@ -94,7 +95,7 @@
         </div>
         
     </div>
-    <footer style="display: flex;
+    <footer style="display: flex;width: 100vw ;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -104,7 +105,7 @@
         <ul style="font-family:'Open Sans'">
             <li style="margin-right: 30px;"><a href="https://www.instagram.com/santos_matheus18/" 
                 target="_blank" style="text-decoration: none; color: rgb(29, 25, 25);">Instagram</a></li>
-            <li><a style="text-decoration: none; color: rgb(29, 25, 25);">Whatsapp</a></li>
+            <li><a href="https://www.linkedin.com/in/matheus-felipe-santos-8a82b4239/" target="_blank" style="text-decoration: none; color: rgb(29, 25, 25);">Linkedin</a></li>
         </ul>
     </footer>
 </body>
@@ -119,7 +120,7 @@
                 alert("A página mudou para: " + JSON.stringify(tipo))
                     content.innerHTML = `
                     <div  style="height: auto; width: auto; flex: 0 0 calc(80% + 10px); 
-            background-color: azure; border-radius: 9px; margin: 10px 10px 40px 10px;  box-shadow: 2px 4px 9px rgb(37, 36, 36);">
+            background-color: azure; border-radius: 9px; margin: 30px 10px 40px 10px;  box-shadow: 2px 4px 9px rgb(37, 36, 36);">
                 <h2 style="margin-top: 20px; margin-bottom: 10px;">Biografia</h2>
                 <span id='hobby' 
                 style=" display: inline-block;height: auto; width: auto;  text-align: center; margin-top: 10px; margin-bottom: 20px">
