@@ -103,11 +103,36 @@ a:hover{
         background-color: currentColor; /* Adicione a cor desejada para as linhas */
         margin: 6px 0;
       }
-      ul.lista{
-        display: none;
+      nav.active .menu{
+        border-top: 0;
       }
-   .lista.active{
+      nav.active .menu::after{
+        transform: rotate(135deg);
+        transition: 0.8s;
+        margin: -2px 0;
+      }
+      nav.active .menu::before{
+        transform: rotate(-135deg);
+        margin: 0;
+        transition: 0.8s;
+        top:25px;
+      }
+      ul#lista{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 18vh;
+        right: 0;
+        visibility: hidden;
+        transition: 0.6s ease-in ;
+        height: 0;
+      }
+   nav.active #lista{
       display: flex;
+      visibility: visible;
       flex-direction: column;
       justify-content: space-around; /* Para justificar horizontalmente */
       align-items: center; /* Para justificar verticalmente */
@@ -117,10 +142,11 @@ a:hover{
       position: absolute;
       top: 18vh;
       right: 0;
-      height: 100vh;
+      height: 400px;
       width: 50vw;
       background-color: rgb(245, 241, 241);
       z-index: 10000000;
+      overflow-y: auto;
    } 
    .active li{
     padding: auto;

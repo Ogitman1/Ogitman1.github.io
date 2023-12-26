@@ -1,6 +1,6 @@
 const menu = document.getElementById("menu");
-const lista = document.getElementById("lista");
+const navbar = document.getElementById("navbar");
 
 menu.addEventListener("click", function(){
-    lista.classList.toggle("active");
+    navbar.classList.toggle("active");
 })
