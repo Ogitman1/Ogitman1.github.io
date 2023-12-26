@@ -74,27 +74,58 @@ a:hover{
     cursor: pointer;
     color: rgb(44, 48, 48);
 }
+
+
+
+  
 @media screen and (max-width: 722px){
     nav{
-        width: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
         height:18vh;
     }
-    nav h2{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-   nav header{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
+    .menu {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-top: 2px solid #000; /* Adicione a cor desejada para a borda superior */
+      
+      }
+      
+      .menu::before,
+      .menu::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor; /* Adicione a cor desejada para as linhas */
+        margin: 6px 0;
+      }
+      ul.lista{
+        display: none;
+      }
+   .lista.active{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; /* Para justificar horizontalmente */
+      align-items: center; /* Para justificar verticalmente */
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 18vh;
+      right: 0;
+      height: 100vh;
+      width: 50vw;
+      background-color: rgb(245, 241, 241);
+      z-index: 10000000;
    } 
-   ul li{
-    padding: 6px calc(3% - 30px);
+   .active li{
+    padding: auto;
     text-align: center;
+    margin-left: 0;
    }
    span#hobby{
      width: auto;
