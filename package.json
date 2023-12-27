@@ -1,0 +1,21 @@
+{
+  "name": "sitedeescola",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "start": "yarn start",
+    "test": "yarn test",
+    "build": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ogitman1.github.io/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yarn": "^1.22.21",
+    "yarn.lock": "^0.0.1-security"
+  }
+}
