@@ -1,0 +1,113 @@
+/* Reset de margens e preenchimentos padrão para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 255, 248);
+    overflow-x: hidden;
+}
+/* Estilos para a navegação */
+nav {
+    display: flex;
+    box-shadow: 2px 5px 5px black;
+    width: 100vw;
+    height: 10vh;
+    justify-content: space-evenly;
+    background-color: rgb(248, 247, 247);
+}
+
+/* Estilos para o cabeçalho dentro da navegação */
+header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+ul li{
+    
+    align-items: center;
+    text-align: center;
+}
+/* Estilos para o título "Linkedin" dentro do cabeçalho */
+h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilos para a lista dentro do cabeçalho */
+ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Estilos para os itens da lista dentro do cabeçalho */
+
+
+/* Estilos para a imagem e o nome no corpo do documento */
+body > div {
+    text-align: center;
+}
+
+/* Estilos para a imagem dentro do corpo do documento */
+img.radius {
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para o nome dentro do corpo do documento */
+h2 {
+    font-size: 1.5em; /* Ajuste o tamanho da fonte conforme necessário */
+}
+a:hover{
+    transition: 0.5s;
+    opacity: 0.7;
+    cursor: pointer;
+    color: rgb(44, 48, 48);
+}
+@media screen and (max-width: 722px){
+    nav{
+        width: auto;
+        height:18vh;
+    }
+    nav h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+   nav header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+   } 
+   ul li{
+    padding: 6px calc(3% - 30px);
+    text-align: center;
+   }
+   span#hobby{
+     width: auto;
+   }
+   ul li{
+    margin-left: calc(0.3%);
+   }
+}
+button:hover{
+    cursor: pointer;
+}
+.technology-section img{
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+}
