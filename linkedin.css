@@ -4,9 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
+    height: 100%;
     background-color: rgb(255, 255, 248);
-    overflow-x: hidden;
+    
+    padding: 0;
+    margin: 0;
 }
 /* Estilos para a navegação */
 nav {
@@ -16,6 +20,8 @@ nav {
     height: 10vh;
     justify-content: space-evenly;
     background-color: rgb(248, 247, 247);
+    padding: 0;
+    margin: 0;
 }
 
 /* Estilos para o cabeçalho dentro da navegação */
@@ -36,7 +42,17 @@ h2 {
     justify-content: center;
     text-align: center;
 }
-
+.mobile-menu div{
+    display: block;
+    height: 2px;
+    width: 32px;
+    background: #1f1f1f;
+    margin: 8px;
+}
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
 /* Estilos para a lista dentro do cabeçalho */
 ul {
     display: flex;
@@ -53,7 +69,17 @@ ul {
 body > div {
     text-align: center;
 }
-
+#content{
+    display: flex;  
+    flex-wrap: wrap; 
+    height: auto; 
+    width: auto; 
+    justify-content: center; 
+    overflow-x: hidden; 
+    padding: 0; 
+    margin: 0; 
+    z-index: -11;
+}
 /* Estilos para a imagem dentro do corpo do documento */
 img.radius {
     display: inline-block;
@@ -75,9 +101,23 @@ a:hover{
     color: rgb(44, 48, 48);
 }
 @media screen and (max-width: 722px){
+    html, body {
+        overflow-x: hidden !important;
+        width: 100%;
+    }
+    #perfil{
+            position: relative;
+            }
     nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: auto;
         height:18vh;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        z-index: 1;
     }
     nav h2{
         display: flex;
@@ -85,24 +125,125 @@ a:hover{
         align-items: center;
         text-align: center;
     }
-   nav header{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-   } 
-   ul li{
-    padding: 6px calc(3% - 30px);
-    text-align: center;
-   }
    span#hobby{
      width: auto;
    }
-   ul li{
-    margin-left: calc(0.3%);
-   }
-}
+   nav header{
+    display: flex;
+    justify-content: space-between; /* Distribui os itens ao longo do container com espaço igual entre eles */
+    align-items: center; /* Alinha os itens verticalmente ao centro do container */
+    margin: 0;
+    padding: 0;
+    z-index: 11;
+    
+    }
+    ul.menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+        max-width: 38vw;
+        background-color: rgb(218, 218, 218);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        height: 100vh;
+        padding: 10px 5px 10px 5px;
+        visibility: hidden;
+    }
+    ul.menu li{
+        display: block;
+        align-items: center;
+        width: 100%; /* Faz os <li> ocuparem toda a largura do <ul> */
+        text-align: center; /* Centraliza o texto dentro dos <li> */
+        padding: 10px; /* Adiciona espaçamento dentro dos <li> para melhor visualização */
+        margin-left: 0;
+        
+        
+    }
+    li a{
+        display: block;
+        width: 100%; /* Faz os <li> ocuparem toda a largura do <ul> */
+        text-align: center; /* Centraliza o texto dentro dos <li> */
+        padding: 10px; /* Adiciona espaçamento dentro dos <li> para melhor visualização */
+    }
+    ul.menu-active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+        max-width: 98vw;
+        background-color: rgb(218, 218, 218);
+        transform: translateX(0);
+        position: absolute;
+        top: 18%;
+        right: -5%;
+        height: 100vh;
+        padding: 10px 5px 10px 5px;
+        transition: transform 0.3s ease-out;
+        z-index: 100;
+        z-index: 100;
+        visibility: visible;
+        margin: 0;
+    }
+    ul.menu-active li{
+        display: block;
+        align-items: center;
+        width: 100%; /* Faz os <li> ocuparem toda a largura do <ul> */
+        text-align: center; /* Centraliza o texto dentro dos <li> */
+        padding: 10px; /* Adiciona espaçamento dentro dos <li> para melhor visualização */
+        margin-right: 50px;
+        
+        
+    }
+    .mobile-menu{
+        display: block;
+        position: absolute;
+        top: 6%;
+        right: 33%;
+        
+    }
+    .mobile-menu div{
+        transform: rotate(0) translate(0);
+        transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+    .mobile-menu-active{
+        position: absolute;
+        top: 6%;
+        right: 33%;
+        z-index: 199 !important;
+    }
+    .mobile-menu-active div.line1{
+        height: 3px;
+        width: 32px;
+        background-color: #1f1f1f;
+        transform: rotate(-45deg) translate(-10px, 8px);
+        transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+    .mobile-menu-active div.line2{
+        opacity: 0;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+    .mobile-menu-active div.line3{
+        height: 3px;
+        width: 32px;
+        background-color: #1f1f1f;
+        transform: rotate(45deg) translate(5px, 7px); 
+        transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+    
+    
+@keyframes navLinkFade {
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
 button:hover{
     cursor: pointer;
 }
@@ -110,4 +251,7 @@ button:hover{
     height: 200px;
     width: 400px;
     border-radius: 20px;
+}
+
+    
 }
