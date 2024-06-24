@@ -4,37 +4,38 @@ class MobileNavBar {
         this.navList = document.querySelector(navList);
         this.navLinks = document.querySelectorAll(navLinks);
 
-        this.activeClass = "menu-active"; // Alterado para representar uma única classe
-        this.activeMenu = "mobile-menu-active"
+          // Alterado para representar uma única classe
+        
         // Para não perder a referência de this à classe
         this.handleClick = this.handleClick.bind(this);
     }
     AnimateLinks(){
-        this.navLinks.forEach((links) => {
+        this.navLinks.forEach((links, index) => {
             links.style.animation ? 
-            (links.style.animation = " ") 
-            : (links.style.animation = ` navLinkFade 0.5s ease fowards 0.3s `)
+            (links.style.animation = "") 
+            : (links.style.animation = `navLinkFade 0.5s ease fowards ${(index/7)*0.7}s`);
         })
     }
     handleClick() {
         console.log(this);
-        if(this.navList.classList.contains(this.activeClass)){
-            this.navList.classList.remove(this.activeClass);
+        if(this.navList.classList.contains("menu-active")){
+            this.navList.classList.remove("menu-active");
             this.navList.classList.add("menu");
         }
         else{
-            this.navList.classList.add(this.activeClass);
+            this.navList.classList.add("menu-active");
             this.navList.classList.remove("menu");
+            this.AnimateLinks()
         }
-        if(this.mobileMenu.classList.contains(this.activeMenu)){
-            this.mobileMenu.classList.remove(this.activeMenu);
+        if(this.mobileMenu.classList.contains("mobile-menu-active")){
+            this.mobileMenu.classList.remove("mobile-menu-active");
             this.mobileMenu.classList.add("mobile-menu");
         }
         else{
-            this.mobileMenu.classList.add(this.activeMenu);
+            this.mobileMenu.classList.add("mobile-menu-active");
             this.mobileMenu.classList.remove("mobile-menu");
         }
-        this.AnimateLinks()
+        
     }
     
     addClick() {
@@ -50,5 +51,5 @@ class MobileNavBar {
     }
 }
 
-const mobileNavBar = new MobileNavBar(".mobile-menu", ".menu", ".menu li");
+const mobileNavBar = new MobileNavBar(".mobile-menu", "ul.menu", "ul.menu li");
 mobileNavBar.init();
