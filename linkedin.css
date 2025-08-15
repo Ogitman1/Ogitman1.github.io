@@ -105,7 +105,7 @@ a:hover{
     cursor: pointer;
     color: rgb(44, 48, 48);
 }
-@media screen and (max-width: 20000px){
+@media screen and (max-width: 670px){
     body{
         position: relative;
     }
@@ -222,6 +222,28 @@ a:hover{
     gap: 12px;
     padding: 16px;
   }
+@keyframes navLinkFade {
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+button:hover{
+    cursor: pointer;
+}
+.technology-section img{
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+}
+
+    
+}
+
   @media (max-width: 900px) {
     .video-grid {
       grid-template-columns:  1fr;
@@ -329,24 +351,3 @@ a:hover{
     display: block;
   }
     
-@keyframes navLinkFade {
-        from{
-            opacity: 0;
-            transform: translateX(50px);
-        }
-        to{
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-button:hover{
-    cursor: pointer;
-}
-.technology-section img{
-    height: 200px;
-    width: 400px;
-    border-radius: 20px;
-}
-
-    
-}
