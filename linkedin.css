@@ -105,7 +105,7 @@ a:hover{
     cursor: pointer;
     color: rgb(44, 48, 48);
 }
-@media screen and (max-width: 780px){
+@media screen and (max-width: 20000px){
     body{
         position: relative;
     }
@@ -156,6 +156,7 @@ a:hover{
         padding: 10px; /* Ajustar padding se necessário */
         width: calc(100% - 20px); /* Ajustar largura considerando o padding */
     }
+    
     ul.menu-active{
         display: flex;
         flex-direction: column;
@@ -213,6 +214,120 @@ a:hover{
         transition: transform 0.6s ease, opacity 0.6s ease;
     }
     
+    /* portfolio videos*/
+    /* Galeria */
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 16px;
+  }
+  @media (max-width: 900px) {
+    .video-grid {
+      grid-template-columns:  1fr;
+    }
+  }
+  @media (max-width: 600px) {
+    .video-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .video-grid video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.25s ease;
+  }
+
+  /* Fundo preto no modo foco */
+  body.focus-mode {
+    overflow: hidden;
+  }
+  body.focus-mode::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: var(--fundo-preto);
+    z-index: 9998;
+  }
+
+  /* Vídeo ampliado */
+  
+  :root {
+    --fundo-preto: rgba(0, 0, 0, 0.96);
+  }
+  /*Opção de video deitado*/
+   .rotate-btn {
+    position: fixed;
+    top: 12px;
+    left: 16px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    font-size: 22px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 10000;
+    display: none;
+    backdrop-filter: blur(4px);
+  }
+  body.focus-mode .rotate-btn { display: block; }
+
+  /*video.rotated {
+    transform: translate(-50%, -50%) rotate(90deg) !important;
+  }*/
+  video.focused.rotated {
+    position: fixed !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 100vh;    /* altura da viewport vira largura */
+    height: 100vw;   /* largura da viewport vira altura */
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    z-index: 9999;
+}
+  video.focused {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: min(92vw, 1280px);
+    height: auto;
+    max-height: 80vh;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Botão X para fechar */
+  .close-btn {
+    position: fixed;
+    top: 12px;
+    right: 16px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 10000;
+    display: none;
+    backdrop-filter: blur(4px);
+  }
+  .close-btn:active {
+    transform: scale(0.9);
+  }
+  body.focus-mode .close-btn {
+    display: block;
+  }
     
 @keyframes navLinkFade {
         from{
